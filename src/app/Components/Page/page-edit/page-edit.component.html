@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Page</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 	<meta name="viewport" content="initial-scale=1.25, user-scalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text" href="../style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	</head>
+<body>
+	<nav class="navbar fixed-top navbar-light sw-bg-grey">
+		<a class="sw-color-black" routerLink="/user/website/{{wid}}/page/{{pid}}"><i class="fas fa-chevron-left"></i></a> 
+			<div class="sw-90-width">
+				<a class="navbar-brand float-left" href="page-edit.html"><b>Edit Page</b></a>
+			</div>
+		<button type="submit" [disabled]="f.invalid" form="pageForm" class="btn sw-button-to-a sw-color-black float-right"><i class="fas fa-check"></i></button>	
+	</nav>
+	<div class="container-fluid">
+
+		<form id="pageform" (ngSumit)="update()" #f="ngForm">
+			<div class="form-group">
+				<label><b>Name</b></label>
+				<input class="form-control" required ngModel="{{page.name}}" #name="ngModel" type="text" name="name" placeholder="Enter your page name..." value="Blog Post">	
+			</div>
+
+			<div ngIf="name.invalid && name.touched" class="alert alert-warning">Name cannot be empty</div>
+			<div class="form-group">
+				<label><b>Description</b></label>
+				<input class="form-control" ngModel={{page.description}}  #description="ngModel type="text" name="description" placeholder="Enter your page description..." value="blog">
+			</div>
+
+			<button class= "btn btn-primary btn-block " type="submit" [disabled]="f.invalid">Update</button>
+			<button class="btn btn-danger btn-block" (click)="remove"  routerLink=>Delete</button>
+		</form>
+		
+	</div>
+	<footer class="navbar fixed-bottom navbar-light sw-bg-grey">
+		<div class="sw-full-width">
+			<a class="navbar-brand float-right" routerLink="/user/{{uid}}><i class=" fas fa-user"></i></a>
+		</div>
+	</footer>			
+</body>
+</html> 

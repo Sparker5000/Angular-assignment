@@ -1,0 +1,36 @@
+   
+
+      <nav class="navbar navbar-dark bg-primary fixed-top">
+              <a class="navbar-brand"><a routerLink="/user/:uid"><b>Profile</b></a>
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+              <button " class="btn sw-font-white sw-button-to-a" type="submit" form="profileform" [disabled]="f.invalid"><i class="fas fa-check"></i></button>
+              </nav>
+              <div class="container-fluid">
+                     <div *ngIf="usernameTaken" class="alert alert-danger">Username is taken, please try another one.</div>
+                     <div *ngIf="submitsuccess" class="alert alert-success">Update successfully</div>
+              	<form (ngSubmit)="update()" form="profileForm" #f="ngForm">
+              		<div class="form-group">
+              			<label for="username"><b>Username</b></label>
+              			<input  class="form-control" type="text"  name="username" required ngModel="{{user.username}}" #username="ngModel" placeholder="example">
+              			</div>
+              			<div class="form-group">
+              			<label for="email"><b>Email</b></label> 
+              			<input  class="form-control" type="email"  name="email"  reqired ngModel="{{user.email}}" #email="ngModel=" placeholder="example@email.com">
+              		</div>
+              		<div class="form-group">
+              			<label  for="first-name"><b>First Name</b></label>
+              			<input class="form-control" type="text" name="firstName" ngModel="{{user.firstName}}" #firstName="ngModel" placeholder="Alice">
+              		</div>
+              		<div class="form-group">
+              			<label for="last-name"><b>Last name</b></label>
+              			<input class="form-control" type="text"name="last-name" ngModel="{{user.lastname}}" lastname="ngModel" placeholder="Parker">
+              			<br>
+              			<a class="btn btn-primary btn-block" routerLink="/user/{{uid}}/website">Websites</a>
+              			<a class="btn btn-danger btn-block" routerLink="/login">Logout</a>
+              		</div>#		
+              		<!--Footer-->
+              		<nav class="navbar navbar-dark bg-primary fixed-bottom">
+              		<div class="sw-width">
+              		        <a  routerLink="/user/{{uid}}" class="sw-font-white float-right" routerLink="/user/:uid"><i class="fas fa-user"></i></a>
+              		<div>
+              	</nav>

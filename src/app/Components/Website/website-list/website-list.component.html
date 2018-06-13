@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-dark bg-primary fixed-top"> 
+    	<a routerLink="/user/:uid/website" class="sw-font-white"><i class="fas fa-chevron-left"></i></a>
+    	<div class="sw-80-width">
+    		   <a class="float-left navbar-brand" routerLink="/user/:uid/website/:wid/page"><b>Websites</b></a>
+    	</div>
+    	<a  class="sw-font-white" routetLink="/user/:uid/website/"><i class="sw-font-white"><i class="fas fa-plus"></i></a>
+    </nav>
+    <!-- Website list -->		
+    <div class="container-fluid">  
+           <ul class="list-group"> 	
+</body>          <li class="list-group-item" *ngFor= "let website of websites"> 
+	                   <a routerLink="user/{{uid}}/website/{{website._id}} /page">{{website.name}}</a>
+	                   <a class="float-right" routerLink="/user/:uid/website/{{website_id}}<"i class="fas fa-cogs"></i><a>
+          <li>
+	            <li class="list-group-item"><a routerLink=user/:uid/website/:wid">             <a class="float-right" routerLink="/user/:uid/website/:wid"><i class="fas fa-cogs"></i></a>
+	            <li class="list-group-item"><a routerLink="/user/uid/website/page"><a>Sparker5000</a>
+	                <a class="float-right" routerLink=" user/uid/website/page"><a class="fas fa-cogs"></i></a>
+	            <li class="list-group-item"><a routerLink="/user/uid/website/:wid/page">Sublime Instructios</a>
+	            	<a class="float-right" routerLink="user/:uid/website/:wid"><i class="fas fa-cogs"></i></a></li>
+	         </ul>
+	    </div>
+	    <!-- footer --> 
+	    <nav class="navbar navbar-dark bg-primary fixed-bottom">
+	          <div class="sw-width">    
+	                 <a routerLink="/user/:uid/website/:wid" class="sw-font-white float-right"><i class="fas fa-cogs"></i></

@@ -1,0 +1,36 @@
+body{
+	padding-top: 70px;
+	padding-bottom: 70px;	
+}
+
+.sw-color-white{
+	color:white;
+}
+
+.sw-color-black{
+	color:black;
+}
+
+.sw-bg-grey{
+	background-color: #afafaf;
+}
+
+.sw-full-width{
+	width: 100%;
+}
+
+.sw-90-width{
+	width: 95%;
+}
+
+.sw-90-width{
+	width: 90%; 
+}
+               
+.sw-50-width{
+	wodth: 50%;
+} 
+
+a:hover{
+   text-decoration: 	
+}             
